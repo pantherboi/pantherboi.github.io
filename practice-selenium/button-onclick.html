@@ -1,0 +1,23 @@
+<html>
+    
+<script src="../js/jquery-3.6.0.min.js"></script>    
+<script>
+    function addElement() {
+        var label = $('#elements button:last-child').text();
+        if(label == '') label = 1;
+        else label = parseInt(label)+1;
+        $("<button class='added-manually' onclick='deleteElement(this)'>"+label+"</button>").appendTo('#elements');
+    }
+    function deleteElement(e) { e.remove(); } 
+</script>
+
+</html>
+
+
+<div>
+    <button onclick="addElement()">Add Element</button>
+</div>
+<br><br>
+<div id="elements">
+
+</div>
