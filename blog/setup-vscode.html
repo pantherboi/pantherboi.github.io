@@ -1,37 +1,19 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
+</head>
 
 <pre>
 
-<a href="https://www.python.org/downloads/"><h3>Install Python</h3></a>
-    python --version
-
-
-<a href="https://robotframework.org/?tab=1#getting-started"><h3>Install Robotframework</h3></a>
-    pip --version   
-    pip install robotframework 
-    robot --version
-
-<a href="https://github.com/robotframework/SeleniumLibrary/" ><h3>Install Robotframework SeleniumLibrary</h3></a>
-    pip --version
-    pip install robotframework
-    robot --version
-
-<a href="https://github.com/robotframework/SeleniumLibrary/#browser-drivers"><h3>Install Webdriver Manager </h3></a>
-    A tool for download webdrivers 
-
-    pip install webdrivermanager
-    webdrivermanager --version 
-    webdrivermanager firefox chrome --linkpath /usr/local/bin 
-    webdrivermanager firefox chrome --linkpath /usr/local/bin --os OSNAME --version   //override version and detected os
-
-    <a href="#Code_Runner"><h3>Visual Studio Code: Code Runner </h3></a>
+<a href="#Code_Runner"><h3>Visual Studio Code: Code Runner </h3></a>
     To run code by use shortcut Ctrl+Alt+N or press F1 and then select/type Run Code
     install plugin <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner" >Code Runner </a>
 
     Example: Run .robot file with robot command 
 
     <code>"code-runner.executorMapByFileExtension": {
-        ".robot": "robot"      
+        ".robot": "robot",   <span class="comment">//execute command set in PATH </span>
+        ".robot": "E:\\git\\PortableGit\\bin\\bash.exe  '$workspaceRoot\\run_robot.sh' $fullFileName"  <span class="comment">//execute active file using shell script in workspace</span>
     }
     </code>
 <a href="https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode"><h3>Visual Studio Code: Robot Code </h3></a>
